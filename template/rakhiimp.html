@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}">
+  {% if title %}
+  <title>Flask Blog - {{ title }}</title>
+  {% else %}
+  <title>Flask Blog</title>
+  {% endif %}
+</head>
+<body >
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary fixed-top"  >
+    <div class="container">
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+         <div class="navbar-nav mr-auto" >
+          <img class="nav-item nav-link"  src="{{url_for('static', filename='rakhi/rak1.jpg')}}"  />
+          <div class="navbar-nav mr-auto" >
+          <a class="nav-item nav-link" href="/home1" >Home</a>
+          <a class="nav-item nav-link" href="/rakshabandhan" >Rakshabandhan</a>
+        </div>
+        </div>
+        <div class="navbar-nav ">
+            <img class="nav-item nav-link" src="{{url_for('static', filename='new3.jpg')}}" />
+         </div>
+      </div>
+    </div>
+  </nav>
+</br>
+</br>
+</br>
+  <main role="main" class="container">
+  <div class="row">
+    <div class="col-md-12" >
+      <div class="content-section" style="background-color: rgb(230,220,240);" >
+        <h3 class="text-info">Rakshabandhan</h3>
+        <p ><font color="black">Raksha Bandhan, also Rakshabandhan, is a popular, traditionally Hindu, annual rite, or ceremony, which is central to a festival of the same name, celebrated in India, Nepal and other parts of the Indian subcontinent, and among people around the world influenced by Hindu culture. On this day, sisters of all ages tie a talisman, or amulet, called the rakhi, around the wrists of their brothers, symbolically protecting them, receiving a gift in return, and traditionally investing the brothers with a share of the responsibility of their potential care.</font></p>
+
+        <p ><font color="#008B8B">Raksha Bandhan is observed on the last day of the Hindu lunar calendar month of Shraavana, which typically falls in August. The expression "Raksha Bandhan," Sanskrit, literally, "the bond of protection, obligation, or care," is now principally applied to this ritual. Until the mid-20th-century, the expression was more commonly applied to a similar ritual, also held on the same day, with precedence in ancient Hindu texts, in which a domestic priest ties amulets, charms, or threads on the wrists of his patrons, or changes their sacred thread, and receives gifts of money; in some places, this is still the case. In contrast, the sister-brother festival, with origins in folk culture, had names which varied with location, with some rendered as Saluno, Silono, and Rakri. A ritual associated with Saluno included the sisters placing shoots of barley behind the ears of their brothers.</font></p>
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

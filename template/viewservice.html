@@ -1,0 +1,44 @@
+{% block body %}
+<div class="align-center">
+    <form action="{{ url_for('viewservice') }}" method="POST">
+        <table class="table" border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Houseno</th>
+					<th>Area</th>
+					<th>Taluko</th>
+					<th>District</th>
+					<th>Pincode</th>
+					<th>Phonenumber</th>
+                </tr>
+            </thead>
+            <tbody>
+               {% for service in services %}
+                  <tr>
+                     <td>{{ service.id }}</td></td>
+                     <td>{{ service.username }}</td>
+                     <td>{{ service.name }}</td>
+                     <td>{{ service.email }}</td>
+                     <td>{{ service.houseno }}</td>
+                     <td>{{ service.area }}</td>
+                     <td>{{ service.taluka }}</td>
+                     <td>{{ service.district }}</td>
+                     <td>{{ service.pincode }}</td>
+                     <td>{{ service.PhoneNumber }}</td>
+                  </tr>
+               {% endfor %}
+            </tbody>
+            <tfoot>
+
+                <tr>
+                    <td colspan="6"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</div>
+{% endblock %}

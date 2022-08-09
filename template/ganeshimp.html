@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}">
+	{% if title %}
+	<title>Flask Blog - {{ title }}</title>
+	{% else %}
+	<title>Flask Blog</title>
+	{% endif %}
+</head>
+<body >
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary fixed-top"  >
+    <div class="container">
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+         <div class="navbar-nav mr-auto" >
+          <img class="nav-item nav-link"  src="{{url_for('static', filename='ganesh/gan1.jpg')}}"  />
+          <div class="navbar-nav mr-auto" >
+          <a class="nav-item nav-link" href="/home1" >Home</a>
+          <a class="nav-item nav-link" href="/ganeshchaturthi" >Ganesh Chaturthi</a>
+        </div>
+        </div>
+        <div class="navbar-nav ">
+            <img class="nav-item nav-link" src="{{url_for('static', filename='new3.jpg')}}" />
+         </div>
+      </div>
+    </div>
+  </nav>
+</br>
+</br>
+</br>
+	<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-12" >
+      <div class="content-section" style="background-color: rgb(230,220,240);" >
+        <h3 class="text-info">Ganesh Chaturthi</h3>
+        <p ><font color="black">Ganesh Chaturthi (ISO: Gaṇeśa Chaturthī), also known as Vinayaka Chaturthi (Vināyaka Chaturthī), is a Hindu festival celebrating the arrival of Ganesh to earth from Kailash Parvat with his mother Goddess Parvati/Gauri. The festival is marked with the installation of Ganesh clay idols privately in homes, or publicly on elaborate pandals (temporary stages). Observations include chanting of Vedic hymns and Hindu texts such as, prayers and brata (fasting). Offerings and prasadam from the daily prayers, that are distributed from the pandal to the community, include sweets such as modaka as it is believed to be a favourite of Lord Ganesh. The festival ends on the tenth day after start, when the idol is carried in a public procession with music and group chanting, then immersed in a nearby body of water such as a river or sea. In Mumbai alone, around 150,000 statues are immersed annually. Thereafter the clay idol dissolves and Ganesh is believed to return to Mount Kailash to Parvati and Shiva. </font></p>
+
+        <p ><font color="#008B8B">The festival celebrates Lord Ganesh as the God of New Beginnings and the Remover of Obstacles as well as the god of wisdom and intelligence and is observed throughout India, especially in the states such as Maharashtra, Goa, Karnataka, Rajasthan, Madhya Pradesh, Andhra Pradesh, Telangana, Odisha, West Bengal, Gujarat and Chhattisgarh, and is celebrated privately at home in Tamil Nadu in 2020 due to Covid-19 Pandemic. Ganesh Chaturthi is also observed in Nepal and by the Hindu diaspora elsewhere such as in Australia, New Zealand, Canada, Singapore, Malaysia, Trinidad and Tobago, Guyana, Suriname, other parts of the Caribbean, Fiji, Mauritius, South Africa[12] United States, and Europe. In the Gregorian calendar, Ganesh Chaturthi falls between 22 August and 20 September every year.</font></p>
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

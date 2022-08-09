@@ -1,0 +1,189 @@
+{%extends "layout.html" %}
+{% block content %}
+	</br>
+	</br>
+	<div class="content-section" style="background-color: rgb(230,220,240);">
+		<form method="POST" action="">
+			{{form.hidden_tag()}}
+			<fieldset class="form-group">
+				<legend class="border-bottom mb-4" style="color:#008B8B"><b>Join Today</b></legend>
+				<div class="form-group" >
+					{{form.username.label(class="form-control-label")}}
+					{% if form.username.errors %}
+						{{form.username(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.username.errors %}
+								<span>{{error}}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+					<input class ="form-control form-control-lg" type="text" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" required >
+					<small ><b><font color="#008B8B">
+			"Username must contain at least one  number and one uppercase and lowercase letter, and at least 5 or more characters"</b>
+					</small>
+					{% endif %}
+				</div>
+				<div class="form-group">
+					{{form.name.label(class="form-control-label")}}
+					{% if form.name.errors %}
+						{{form.name(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.name.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+					{{form.name(class="form-control form-control-lg")}}
+					{% endif %}
+				</div>
+				<div class="form-group">
+					{{form.District.label(class="form-control-label")}}
+					{% if form.District.errors %}
+						{{form.District(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.District.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+					{{form.District(class=" form-control form-control-lg")}}
+					{% endif %}
+				</div>
+				<div class="form-group">
+					{{form.Taluka.label(class="form-control-label")}}
+					{% if form.Taluka.errors %}
+						{{form.Taluka(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.Taluka.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+					{{form.Taluka(class=" form-control form-control-lg")}}
+					{% endif %}
+				</div>
+				<div class="form-group">
+					{{form.Area.label(class="form-control-label")}}
+					{% if form.Area.errors %}
+						{{form.Area(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.Area.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+					{{form.Area(class=" form-control form-control-lg")}}
+					{% endif %}
+				</div>
+				<div class="form-group">
+					{{form.House_no.label(class="form-control-label")}}
+					{% if form.House_no.errors %}
+						{{form.House_no(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.House_no.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+					{{form.House_no(class=" form-control form-control-lg")}}
+					{% endif %}
+				</div>
+				<div class="form-group">
+					{{form.pincode.label(class="form-control-label")}}
+					{% if form.pincode.errors %}
+						{{form.pincode(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.pincode.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+					{{form.pincode(class="form-control form-control-lg")}}
+					{% endif %}
+				</div>
+				<div class="border-top pt-3">
+					<small class="text-muted"><b><font color="#696969">
+					If You Don't Know The Pincode!!</font><a class="ml-2" href="https://www.indiapost.gov.in/VAS/Pages/findpincode.aspx">Click here</a></b>
+					</small>
+				</div>
+				<div class="form-group">
+					{{form.PhoneNumber.label(class="form-control-label")}}
+					{% if form.PhoneNumber.errors %}
+						{{form.PhoneNumber(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.PhoneNumber.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+					{{form.PhoneNumber(class="form-control form-control-lg")}}
+					{% endif %}
+				</div>
+				<div class="form-group">
+					{{form.example.label(class="form-control-label")}}
+					{% if form.example.errors %}
+						{{form.example(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.example.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+					{{form.example(class=" form-control-lg")}}
+					{% endif %}
+				</div>
+			</br>
+		</br>
+			</fieldset>
+				<div class="form-group">
+					{{form.email.label(class="form-control-label")}}
+					{% if form.email.errors %}
+						{{form.email(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.email.errors %}
+								<span>{{error}}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+					{{form.email(class="form-control form-control-lg")}}
+					{% endif %}
+				</div>
+				<div class="form-group">
+					{{form.password.label(class="form-control-label")}}
+					{% if form.password.errors %}
+						{{form.password(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.password.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+					{{form.password(class="form-control form-control-lg")}}
+					{% endif %}
+				</div>
+				<div class="form-group">
+					{{form.confirm_password.label(class="form-control-label")}}
+					{% if form.confirm_password.errors %}
+						{{form.confirm_password(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.confirm_password.errors %}
+								<span>{{error}}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+					{{form.confirm_password(class="form-control form-control-lg")}}
+					{% endif %}
+				</div>
+			</fieldset>
+			<div class="form-group" >
+				{{form.submit(class="btn btn-outline-info")}}
+			</div>
+		</form>
+	</div>
+	<div class="border-top pt-3">
+		<small class="text-muted"><b><font color="#696969">
+			Already Have An Account?</font><a class="ml-2" href="{{url_for('login')}}">Sign In</a></b>
+		</small>
+
+	</div>
+{% endblock content %}

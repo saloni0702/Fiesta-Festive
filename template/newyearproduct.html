@@ -1,0 +1,39 @@
+{% block body %}
+<div class="align-center">
+    <form action="{{ url_for('newyearproduct') }}" method="POST">
+        <table class="table" border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>Price</th>
+					<th>Company Name</th>
+                    <th>Quantity</th>
+					<th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for ny in products %}
+               <tr>
+                  <td>{{ ny.id }}</td>
+                  <td>{{ ny.name }}</td>
+                  <td>{{ ny.types }}</td>
+                  <td>{{ ny.category }}</td>
+                  <td>{{ ny.price }}</td>
+                  <td>{{ ny.companyname }}</td>
+                  <td>{{ ny.quantity }}</td>
+                  <td>{{ ny.detail }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</div>
+{% endblock %}

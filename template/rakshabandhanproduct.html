@@ -1,0 +1,39 @@
+{% block body %}
+<div class="align-center">
+    <form action="{{ url_for('rakshabandhanproduct') }}" method="POST">
+        <table class="table" border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>Price</th>
+					<th>Company Name</th>
+                    <th>Quantity</th>
+					<th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for rak in products %}
+               <tr>
+                  <td>{{ rak.id }}</td>
+                  <td>{{ rak.name }}</td>
+                  <td>{{ rak.types }}</td>
+                  <td>{{ rak.category }}</td>
+                  <td>{{ rak.price }}</td>
+                  <td>{{ rak.companyname }}</td>
+                  <td>{{ rak.quantity }}</td>
+                  <td>{{ rak.detail }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</div>
+{% endblock %}

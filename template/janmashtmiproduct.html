@@ -1,0 +1,39 @@
+{% block body %}
+<div class="align-center">
+    <form action="{{ url_for('janmashtmiproduct') }}" method="POST">
+        <table class="table" border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>Price</th>
+					<th>Company Name</th>
+                    <th>Quantity</th>
+					<th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for jan in products %}
+               <tr>
+                  <td>{{ jan.id }}</td>
+                  <td>{{ jan.name }}</td>
+                  <td>{{ jan.types }}</td>
+                  <td>{{ jan.category }}</td>
+                  <td>{{ jan.price }}</td>
+                  <td>{{ jan.companyname }}</td>
+                  <td>{{ jan.quantity }}</td>
+                  <td>{{ jan.detail }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</div>
+{% endblock %}

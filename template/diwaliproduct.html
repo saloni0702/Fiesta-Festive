@@ -1,0 +1,34 @@
+{% block body %}
+<div class="align-center">
+    <form action="{{ url_for('diwaliproduct') }}" method="POST">
+        <table class="table" border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>Price</th>
+					<th>Company Name</th>
+                    <th>Quantity</th>
+					<th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for diwali in products %}
+               <tr>
+                  <td>{{ diwali.id }}</td>
+                  <td>{{ diwali.name }}</td>
+                  <td>{{ diwali.types }}</td>
+                  <td>{{ diwali.category }}</td>
+                  <td>{{ diwali.price }}</td>
+                  <td>{{ diwali.companyname }}</td>
+                  <td>{{ diwali.quantity }}</td>
+                  <td>{{ diwali.detail }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+        </table>
+    </form>
+</div>
+{% endblock %}

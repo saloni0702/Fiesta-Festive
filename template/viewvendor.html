@@ -1,0 +1,43 @@
+{% block body %}
+<div class="align-center">
+    <form action="{{ url_for('viewvendor') }}" method="POST">
+        <table class="table" border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Houseno</th>
+					<th>Area</th>
+					<th>Taluko</th>
+					<th>District</th>
+					<th>Pincode</th>
+					<th>Phonenumber</th>
+                </tr>
+            </thead>
+            <tbody>
+               {% for vendor in vendors %}
+                  <tr>
+                     <td>{{ vendor.id }}</td></td>
+                     <td>{{ vendor.username }}</td>
+                     <td>{{ vendor.name }}</td>
+                     <td>{{ vendor.email }}</td>
+                     <td>{{ vendor.houseno }}</td>
+                     <td>{{ vendor.area }}</td>
+                     <td>{{ vendor.taluka }}</td>
+                     <td>{{ vendor.district }}</td>
+                     <td>{{ vendor.pincode }}</td>
+                     <td>{{ vendor.PhoneNumber }}</td>
+                  </tr>
+               {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</div>
+{% endblock %}

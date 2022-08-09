@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}">
+  {% if title %}
+  <title>Flask Blog - {{ title }}</title>
+  {% else %}
+  <title>Flask Blog</title>
+  {% endif %}
+</head>
+<body >
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary fixed-top"  >
+    <div class="container">
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+         <div class="navbar-nav mr-auto" >
+          <img class="nav-item nav-link"  src="{{url_for('static', filename='uttrayan/utt1.jpg')}}"  />
+          <div class="navbar-nav mr-auto" >
+          <a class="nav-item nav-link" href="/home1" >Home</a>
+          <a class="nav-item nav-link" href="/about">About</a>
+        </div>
+        </div>
+        <div class="navbar-nav ">
+            <img class="nav-item nav-link" src="{{url_for('static', filename='new3.jpg')}}" />
+         </div>
+      </div>
+    </div>
+  </nav>
+</br>
+</br>
+</br>
+  <main role="main" class="container">
+  <div class="row">
+    <div class="col-md-12" >
+      <div class="content-section" style="background-color: rgb(230,220,240);" >
+        <h3 class="text-info">Uttrayan</h3>
+        <p ><font color="black">The term Uttarāyaṇa (commonly Uttarayan) is derived from two different Sanskrit words "uttara" (North) and "ayana" (movement) thus indicating a semantic of the northward movement of the Earth on the celestial sphere. This movement begins to occur a day after the winter solstice in December which occurs around 22 December and continues for a six-month period through to the summer solstice around June 21 (dates vary ). This difference is because the solstices are continually precessing at a rate of 50 arcseconds / year due to the precession of the equinoxes, i.e. this difference is the difference between the sidereal and tropical zodiacs. The Surya Siddhanta bridges this difference by juxtaposing the four solstitial and equinotial points with four of the twelve boundaries of the rashis.</font></p>
+
+        <p ><font color="#008B8B">Uttarayana is referred to as the day of new good healthy wealthy beginning.
+
+According to Kauravas and Pandavas, in Mahabharata on this day Bheeshma Pitamaha, chose to leave for his heavenly abode. As per the boon granted to Devavrata (young Bheeshma), he could choose his time of death chose this day, when the sun starts on its course towards the northern hemisphere.
+
+According to the Hindu tradition the six months of Uttarayana are a single day of the Gods; the six months of Dakshinayana are a single night of the Gods. Thus a year of twelve months is single Nychthemeron of the Gods.</font></p>
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

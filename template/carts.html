@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}">
+  {% if title %}
+  <title>Flask Blog - {{ title }}</title>
+  {% else %}
+  <title>Flask Blog</title>
+  {% endif %}
+</head>
+<body >
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary fixed-top"  >
+    <div class="container">
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+         <div class="navbar-nav mr-auto" >
+          <div class="navbar-nav mr-auto" >
+          <a class="nav-item nav-link" href="/home1" >Home</a>
+          <a class="nav-link disabled" href="/carts" tableindex="-1" >Cart ({{session['Shoppingcart']|length}})</a>
+        </div>
+        </div>
+        <div class="navbar-nav ">
+            <img class="nav-item nav-link" src="{{url_for('static', filename='new3.jpg')}}" />
+         </div>
+      </div>
+    </div>
+  </nav>
+</br>
+</br>
+</br>
+  <main role="main" class="container">
+  <div class="row">
+    <table class="table table-sm">
+      <thead>
+        <th>Sr</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+        <th>Update</th>
+        <th>Remove
+        </th>
+      </thead>
+      <tbody>
+        {%for key, product in session['Shoppingcart'].items()%}
+        <tr>
+          <td>{{loop.index}}</td>
+          <td>{{product.name}}</td>
+          <form action="{{url_for('updatecart',code=key)}}" method="post">
+          <td>{{product.price}}</td>
+          <td><input type="number" name="quantity" min="1" max="10" value="{{product.quantity}}"></td>
+          {% set subtotal=product.quantity|int*product.price|float%}
+          <td>{{subtotal}}</td>
+          <td><button type="submit" class="btn btn-sm btn-info">Update</button></td>
+        </form>
+          <td><a href="{{url_for('deleteitem',id=key)}}" class="btn btn-sn btn-warning">Remove</a></td>
+        </tr>
+        {% endfor %}
+        <tr>
+          <td></td>
+          <td><a href="{{url_for('final')}}" type="submit" class="float-left btn btn-sm btn-primary">Place Order</a></td>
+          <td colspan="3"><h4>Tax:{{tax}} Rs</h4></td>
+          <td colspan="4"><h4>Grand Total: {{grandtotal}} Rs</h4></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+</body>
+</html>

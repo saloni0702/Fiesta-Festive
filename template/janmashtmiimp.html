@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}">
+  {% if title %}
+  <title>Flask Blog - {{ title }}</title>
+  {% else %}
+  <title>Flask Blog</title>
+  {% endif %}
+</head>
+<body >
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary fixed-top"  >
+    <div class="container">
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+         <div class="navbar-nav mr-auto" >
+          <img class="nav-item nav-link"  src="{{url_for('static', filename='janmashtmi/jan1.jpg')}}"  />
+          <div class="navbar-nav mr-auto" >
+          <a class="nav-item nav-link" href="/home1" >Home</a>
+          <a class="nav-item nav-link" href="/janmashtmi">Janmashtmi</a>
+        </div>
+        </div>
+        <div class="navbar-nav ">
+            <img class="nav-item nav-link" src="{{url_for('static', filename='new3.jpg')}}" />
+         </div>
+      </div>
+    </div>
+  </nav>
+</br>
+</br>
+</br>
+  <main role="main" class="container">
+  <div class="row">
+    <div class="col-md-12" >
+      <div class="content-section" style="background-color: rgb(230,220,240);" >
+        <h3 class="text-info">Janmashtmi</h3>
+        <p ><font color="black">Krishna Janmashtami, also known simply as Janmashtami or Gokulashtami, is an annual Hindu festival that celebrates the birth of Krishna, the eighth avatar of Vishnu.[3] It is observed according to the Hindu lunisolar calendar, on the eighth day (Ashtami) of the Krishna Paksha (dark fortnight) in Shraavana or Bhadrapad (depending on whether the calendar chooses the new moon or full moon day as the last day of the month), which overlaps with August or September of the Gregorian calendar. It is an important festival, particularly in the Vaishnavism tradition of Hinduism. Dance-drama enactments of the life of Krishna according to the Bhagavata Purana (such as Rasa Lila or Krishna Lila), devotional singing through the midnight when Krishna was born, fasting (upavasa), a night vigil (Ratri Jagaran), and a festival (Mahotsav) on the following day are a part of the Janmashtami celebrations. It is celebrated particularly in Mathura and Vrindavan, along with major Vaishnava and non-sectarian communities found in Manipur, Assam, Bihar, West Bengal, Odisha, Madhya Pradesh, Rajasthan, Gujarat, Maharashtra, Karnataka, Kerala, Tamil Nadu, Andhra Pradesh and all other states of India.</font></p>
+
+        <p ><font color="#008B8B">Krishna is Devaki and Vasudeva Anakadundubhi's son and his birthday is celebrated by Hindus as Janmashtami, particularly those of the Gaudiya Vaishnavism tradition as he is considered the Supreme Personality of Godhead. Janmashtami is celebrated when Krishna is believed to have been born according to Hindu tradition, which is in Mathura, at midnight on the eighth day of Bhadrapada month (overlaps with August and 3 September in the Gregorian calendar).
+
+Krishna is born in an area of chaos. It's a time when persecution was rampant, freedoms were denied, evil was everywhere, and when there was a threat to his life by his uncle King Kansa. Immediately following the birth at Mathura, his father Vasudeva Anakadundubhi takes Krishna across the Yamuna, to foster parents in Gokul, named Nanda and Yashoda. This legend is celebrated on Janmashtami by people keeping fast, singing devotional songs of love for Krishna, and keeping a vigil into the night.After Krishna's midnight hour birth, statues of baby Krishna are washed and clothed, then placed in a cradle. The devotees then break their fast, by sharing food and sweets. Women draw tiny footprints outside their house doors and kitchen, walking towards their house, a symbolism for Krishna's journey into their homes.</font></p>
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}">
+	{% if title %}
+	<title>Flask Blog - {{ title }}</title>
+	{% else %}
+	<title>Flask Blog</title>
+	{% endif %}
+</head>
+<body >
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary fixed-top"  >
+    <div class="container">
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+         <div class="navbar-nav mr-auto" >
+          <img class="nav-item nav-link"  src="{{url_for('static', filename='janmashtmi/jan1.jpg')}}"  />
+          <div class="navbar-nav mr-auto" >
+          <a class="nav-item nav-link" href="/home1" >Home</a>
+          <a class="nav-item nav-link" href="/janmashtmi" >Janmashtmi</a>
+          <a class="nav-item nav-link" href="/janmashtmiimp">Janmasthmi_Importance</a>
+          <a class="nav-link" href="/carts" tableindex="-1" >Cart ({{session['Shoppingcart']|length}})</a>
+        </div>
+        </div>
+        <div class="navbar-nav ">
+            <img class="nav-item nav-link" src="{{url_for('static', filename='new3.jpg')}}" />
+         </div>
+      </div>
+    </div>
+  </nav>
+</br>
+</br>
+</br>
+	<main role="main" class="container">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6" id="b_image">
+        <img src="{{url_for('static',filename=products.image)}}" alt="{{products.name}}" width="350" height="350">
+      </div>
+      <div class="col-md-6">
+        <h4>Product Name: {{products.name}}</h4>
+        <p>Product Price: {{products.price}}</p>
+        <b>Product Description:</b>
+        <p>Product types: {{products.types}}</p>
+        <p>Product Category: {{products.category}}</p>
+        <p>Product price: {{products.price}}</p>
+        <p>Product company_name: {{products.companyname}}</p>
+        <p>Product Quantity: {{products.quantity}}</p>
+        <p>Product details: {{products.detail}}</p>
+      <hr>
+        <form action="{{url_for('AddCart')}}" method="post">
+          <input type="hidden" name="product_id" value="{{products.id}}">
+          <button type="submit" name="onsubmit" value="5" class="btn btn-sm btn-warning">Add Cart</button>
+          <label for="">Quantity</label>
+          <input type="number" name="quantity" id="" value="1" min="1" max="{{products.quantity}}">
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

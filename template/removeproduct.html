@@ -1,0 +1,54 @@
+{%extends "layout1.html" %}
+{% block content %}
+	</br>
+	</br>
+	<div class="content-section" style="background-color: rgb(230,220,240);">
+		<form method="POST" action="">
+			{{form.hidden_tag()}}
+			<fieldset class="form-group">
+				<legend class="border-bottom mb-4" style="color:#008B8B"><b>Remove Product</b></legend>
+				<div class="form-group">
+					{{form.product_name.label(class="form-control-label")}}
+					{% if form.product_name.errors %}
+						{{form.product_name(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.name.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+					{{form.product_name(class="form-control form-control-lg")}}
+					{% endif %}
+				</div>
+				<div class="form-group" >
+					{{form.username.label(class="form-control-label")}}
+					{% if form.username.errors %}
+						{{form.username(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.username.errors %}
+								<span>{{error}}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+					{{form.username(class="form-control form-control-lg")}}
+					{% endif %}
+				</div>
+				<div class="form-group">
+					{{form.festival.label(class="form-control-label")}}
+					{% if form.festival.errors %}
+						{{form.festival(class="form-control form-control-lg is-invalid")}}
+						<div class="invalid-feedback">
+							{% for error in form.District.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+						{{form.festival(class=" form-control form-control-lg")}}
+					{% endif %}
+				</div>
+			</fieldset>
+				<div class="form-group">
+					{{ form.submit(class="btn btn-outline-info") }}</div>
+		</form>
+	</div>
+{% endblock content %}

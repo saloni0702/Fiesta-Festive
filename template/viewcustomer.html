@@ -1,0 +1,39 @@
+{% block body %}
+<div class="align-center">
+    <form action="{{ url_for('viewcustomer') }}" method="POST">
+       <table class="table" border="1|0">
+         <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Houseno</th>
+                <th>Area</th>
+                <th>Taluka</th>
+                <th>District</th>
+                <th>Pincode</th>
+                <th>Phonenumber</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for customer in customers %}
+               <tr>
+                  <td>{{ customer.id }}</td></td>
+                  <td>{{ customer.username }}</td>
+                  <td>{{ customer.name }}</td>
+                  <td>{{ customer.email }}</td>
+                  <td>{{ customer.houseno }}</td>
+                  <td>{{ customer.area }}</td>
+                  <td>{{ customer.taluka }}</td>
+                  <td>{{ customer.district }}</td>
+                  <td>{{ customer.pincode }}</td>
+                  <td>{{ customer.PhoneNumber }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}">
+	{% if title %}
+	<title>Flask Blog - {{ title }}</title>
+	{% else %}
+	<title>Flask Blog</title>
+	{% endif %}
+</head>
+<body >
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary fixed-top"  >
+    <div class="container">
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+         <div class="navbar-nav mr-auto" >
+          <img class="nav-item nav-link"  src="{{url_for('static', filename='newyear/ne1.jpg')}}"  />
+          <div class="navbar-nav mr-auto" >
+          <a class="nav-item nav-link" href="/home1" >Home</a>
+          <a class="nav-item nav-link" href="/newyear" >New Year</a>
+        </div>
+        </div>
+        <div class="navbar-nav ">
+            <img class="nav-item nav-link" src="{{url_for('static', filename='new3.jpg')}}" />
+         </div>
+      </div>
+    </div>
+  </nav>
+</br>
+</br>
+</br>
+	<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-12" >
+      <div class="content-section" style="background-color: rgb(230,220,240);" >
+        <h3 class="text-info">New Year Eve</h3>
+        <p ><font color="black">New Year's Day, also simply called New Year, is observed on 1 January, the first day of the year on the modern Gregorian calendar as well as the Julian calendar.
+
+In pre-Christian Rome under the Julian calendar, the day was dedicated to Janus, god of gateways and beginnings, for whom January is also named. As a date in the Gregorian calendar of Christendom, New Year's Day liturgically marked the Feast of the Naming and Circumcision of Jesus, which is still observed as such in the Anglican Church and Lutheran Church. The Roman Catholic Church celebrates on this day the Solemnity of Mary, Mother of God.
+</font></p>
+
+        <p ><font color="#008B8B">In present day, with most countries now using the Gregorian calendar as their de facto calendar, New Year's Day is among the most celebrated public holidays in the world, often observed with fireworks at the stroke of midnight as the new year starts in each time zone. Other global New Year's Day traditions include making New Year's resolutions and calling one's friends and family.</font></p>
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
